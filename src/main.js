@@ -6,6 +6,8 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+Vue.prototype._ = require("lodash")
+
 new Vue({
   router,
   store,
