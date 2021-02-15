@@ -26,7 +26,7 @@ VueJS is used by my current job so this project's goal is to improve my skills.
 - [ ] Stock
   - [ ] Remaining cards not dealt to tableu
 - [x] Talon
-- [x] Since this game will have exactly 52 cards, there will be no waste
+  - [x] Since this game will have exactly 52 cards, there will be no waste
 
 ---
 
