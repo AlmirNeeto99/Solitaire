@@ -1,1 +1,5 @@
-# solitaire
+# Solitaire
+
+- [ ] New Game
+
+- [ ] Load Game
