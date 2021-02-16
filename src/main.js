@@ -6,10 +6,12 @@ import store from './store'
 
 Vue.config.productionTip = false
 
-Vue.prototype._ = require("lodash")
+Vue.prototype._ = require('lodash')
+
+Vue.prototype.$appName = 'Solitaire'
 
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')
