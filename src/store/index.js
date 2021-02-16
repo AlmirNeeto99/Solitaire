@@ -5,11 +5,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    hasSavedGame: false,
   },
-  mutations: {
+  getters: {
+    hasSavedGame(state) {
+      return state.hasSavedGame
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: {},
+  actions: {},
+  modules: {},
 })
