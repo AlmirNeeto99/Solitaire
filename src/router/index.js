@@ -12,6 +12,14 @@ const routes = [
       title: 'Menu',
     },
   },
+  {
+    name: 'Game',
+    path: 'game',
+    component: () => import(/*webpackChunkName: "game"*/ '../views/Game.vue'),
+    meta: {
+      title: 'Game',
+    },
+  },
 ]
 
 const router = new VueRouter({
