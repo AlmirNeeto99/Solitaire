@@ -22,6 +22,7 @@
             'bg-gray-400 cursor-default': !this.hasSavedGame,
           }"
           @click="this.loadGame"
+          :disabled="!this.hasSavedGame"
         >
           Load Game
         </button>
