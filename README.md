@@ -7,6 +7,7 @@ VueJS is used by my current job so this project's goal is to improve my skills.
   - [ ] Save Game
   - [ ] Load Game
 - [ ] Cards
+  - [x] Cards component
   - [ ] "Create" 52 cards
   - [ ] Shuffle
   - [ ] Dealing cards
