@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen">
-    <router-view class="min-h-screen flex" />
+    <router-view class="min-h-screen flex flex-wrap" />
   </div>
 </template>
 
