@@ -7,7 +7,7 @@ VueJS is used by my current job so this project's goal is to improve my skills.
   - [ ] Save Game
   - [ ] Load Game
 - [ ] Cards
-  - [x] Cards component
+  - [x] Card component
   - [ ] "Create" 52 cards
   - [ ] Shuffle
   - [ ] Dealing cards
@@ -25,6 +25,7 @@ VueJS is used by my current job so this project's goal is to improve my skills.
   - [ ] Lower cards can be put on top of higher ones (different suits)
   - [ ] Move a card from a faced down card, make it face up
 - [ ] Stock
+  - [x] Stock container
   - [ ] Remaining cards not dealt to tableu
 - [x] Talon
   - [x] Since this game will have exactly 52 cards, there will be no waste
