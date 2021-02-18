@@ -20,6 +20,14 @@ const routes = [
       title: 'Game',
     },
   },
+  {
+    name: 'Card',
+    path: '/card',
+    component: () => import(/*webpackChunkName: "card"*/ '../views/Card.vue'),
+    meta: {
+      title: 'Card',
+    },
+  },
 ]
 
 const router = new VueRouter({

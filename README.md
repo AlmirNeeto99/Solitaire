@@ -14,11 +14,11 @@ VueJS is used by my current job so this project's goal is to improve my skills.
   - [ ] Block face-down cards
   - [ ] Create the logic to put lower cards above higher ones
 - [ ] Foundations
-  - [ ] Draw the cards' container
+  - [x] Draw the cards' container
   - [ ] Handle dropped cards into container
   - [ ] Cards in the foundation should be same suit and ordered from ace to king, where ace is the base and king is the top
 - [ ] Tableu
-  - [ ] Seven piles
+  - [x] Seven piles
   - [ ] Tableu dealing algorithm
   - [ ] If one tableu pile is empty, it can only be filled with a king
   - [ ] Lower cards can be put on top of higher ones (different suits)
