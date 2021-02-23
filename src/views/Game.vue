@@ -5,13 +5,13 @@
       class="w-full flex flex-wrap h-full py-3 px-3 flex-row justify-between"
     >
       <div id="stock" class="h-44 w-32">
-        <cards-container></cards-container>
+        <cards-container><card></card></cards-container>
       </div>
       <div id="foundations" class="h-44 w-3/5 flex justify-between">
-        <cards-container></cards-container>
-        <cards-container></cards-container>
-        <cards-container></cards-container>
-        <cards-container></cards-container>
+        <cards-container><card rank="5" suit="hearts" /></cards-container>
+        <cards-container><card rank="A" suit="clubs" /></cards-container>
+        <cards-container><card rank="9" suit="diamonds" /></cards-container>
+        <cards-container><card rank="Q" suit="spades" /></cards-container>
       </div>
     </div>
     <div
@@ -31,8 +31,9 @@
 
 <script>
 import CardsContainer from '@/components/CardsContainer'
+import Card from '@/components/Card'
 export default {
-  components: { CardsContainer },
+  components: { CardsContainer, Card },
 }
 </script>
 
