@@ -1,6 +1,8 @@
 <template>
   <div class="min-h-screen">
-    <router-view class="min-h-screen flex flex-wrap" />
+    <transition name="fade">
+      <router-view class="min-h-screen flex flex-wrap relative" />
+    </transition>
   </div>
 </template>
 
