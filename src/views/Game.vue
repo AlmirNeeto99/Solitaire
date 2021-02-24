@@ -8,10 +8,10 @@
         <cards-container><card></card></cards-container>
       </div>
       <div id="foundations" class="h-44 w-3/5 flex justify-between">
-        <cards-container><card rank="5" suit="hearts" /></cards-container>
+        <cards-container><card rank="A" suit="hearts" /></cards-container>
         <cards-container><card rank="A" suit="clubs" /></cards-container>
-        <cards-container><card rank="9" suit="diamonds" /></cards-container>
-        <cards-container><card rank="Q" suit="spades" /></cards-container>
+        <cards-container><card rank="A" suit="diamonds" /></cards-container>
+        <cards-container><card rank="A" suit="spades" /></cards-container>
       </div>
     </div>
     <div
