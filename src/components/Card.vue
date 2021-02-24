@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-44 z-10 flex w-32 bg-gray-200 border border-gray-700 rounded-lg p-1 select-none"
+    class="h-44 z-10 flex w-32 bg-gray-100 border border-gray-700 rounded-lg p-1 select-none"
     ref="card"
   >
     <div class="w-full rounded-md bg-white h-full flex flex-wrap">
@@ -74,13 +74,11 @@ export default {
         card.style.left = card.offsetLeft - afterX + 'px'
       }
       document.onmouseup = function (e) {
-        console.log(e)
         card.classList.remove('absolute')
         document.onmousemove = null
         document.onmouseup = null
         card.style.top = '0px'
         card.style.left = '0px'
-        e.qweqw = 'q'
       }
     })
   },
