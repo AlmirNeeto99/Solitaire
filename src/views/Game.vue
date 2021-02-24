@@ -5,7 +5,7 @@
       class="w-full flex flex-wrap h-full py-3 px-3 flex-row justify-between"
     >
       <div id="stock" class="h-44 w-32">
-        <cards-container><card></card></cards-container>
+        <cards-container><card rank="A" suit="hearts" /></cards-container>
       </div>
       <div id="foundations" class="h-44 w-3/5 flex justify-between">
         <cards-container><card rank="A" suit="hearts" /></cards-container>
