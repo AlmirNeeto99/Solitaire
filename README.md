@@ -8,8 +8,8 @@ VueJS is used by my current job so this project's goal is to improve my skills.
   - [ ] Load Game
 - [ ] Cards
   - [x] Card component
-  - [ ] "Create" 52 cards
-  - [ ] Shuffle
+  - [x] "Create" 52 cards
+  - [x] Shuffle
   - [ ] Dealing cards
   - [ ] Draggable face-up cards
   - [ ] Block face-down cards
