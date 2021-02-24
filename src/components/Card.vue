@@ -2,6 +2,7 @@
   <div
     class="h-44 z-10 flex w-32 bg-gray-100 border border-gray-700 rounded-lg p-1 select-none"
     ref="card"
+    :style="calculateMargin"
   >
     <div class="w-full rounded-md bg-white h-full flex flex-wrap">
       <div class="upper w-full self-start flex p-1">
@@ -46,13 +47,16 @@
 
 <script>
 export default {
-  props: ['suit', 'rank'],
+  props: ['suit', 'rank', 'index'],
   computed: {
     getSuit() {
       return require(`@/assets/images/${this.suit}.png`)
     },
     isRed() {
       return this.suit == 'hearts' || this.suit == 'diamonds'
+    },
+    calculateMargin() {
+      return this.index != 0 ? 'margin-top: -120px' : ''
     },
   },
   mounted() {
