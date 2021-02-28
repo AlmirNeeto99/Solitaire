@@ -1,10 +1,13 @@
 <template>
   <div
-    class="h-44 z-10 flex w-32 bg-gray-100 border border-gray-700 rounded-lg p-1 select-none"
+    class="h-44 z-10 flex w-32 bg-gray-100 border border-gray-700 rounded-lg p-1 select-none" :class="{'absolute': pile}"
     ref="card"
     :style="calculateMargin"
   >
-    <div class="w-full rounded-md bg-white h-full flex flex-wrap">
+    <div
+      v-if="!this.down"
+      class="w-full rounded-md bg-white h-full flex flex-wrap"
+    >
       <div class="upper w-full self-start flex p-1">
         <div class="w-1/2 text-left">
           <div :class="{ 'text-red-500': isRed }" class="number left">
@@ -42,12 +45,13 @@
         </div>
       </div>
     </div>
+    <div v-else class="bg-red-500 w-full h-full rounded-lg"></div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['suit', 'rank', 'index'],
+  props: ['suit', 'rank', 'index', 'down', 'pile'],
   computed: {
     getSuit() {
       return require(`@/assets/images/${this.suit}.png`)
@@ -56,44 +60,8 @@ export default {
       return this.suit == 'hearts' || this.suit == 'diamonds'
     },
     calculateMargin() {
-      return this.index != 0 ? 'margin-top: -120px' : ''
+      return this.index != 0 && !this.pile ? 'margin-top: -145px' : ''
     },
-  },
-  mounted() {
-    let card = this.$refs.card
-    var initialX = 0,
-      initialY = 0,
-      afterX = 0,
-      afterY = 0
-    let margin = null
-    console.log()
-    card.addEventListener('mousedown', function (e) {
-      card.parentNode.children.forEach((el) => {
-        console.log(el == card)
-      })
-      margin = card.style.marginTop
-      console.log(card.style.marginTop)
-      initialX = e.clientX
-      initialY = e.clientY
-      document.onmousemove = function (e) {
-        card.classList.add('fixed')
-        card.style.marginTop = null
-        afterX = initialX - e.clientX
-        afterY = initialY - e.clientY
-        initialX = e.clientX
-        initialY = e.clientY
-        card.style.top = card.offsetTop - afterY + 'px'
-        card.style.left = card.offsetLeft - afterX + 'px'
-      }
-      document.onmouseup = function (e) {
-        card.classList.remove('fixed')
-        document.onmousemove = null
-        document.onmouseup = null
-        card.style.top = null
-        card.style.left = null
-        card.style.marginTop = margin
-      }
-    })
   },
 }
 </script>
