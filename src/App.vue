@@ -12,6 +12,7 @@ html {
   @apply h-full;
 }
 body {
+  @apply overflow-hidden;
   @apply min-h-screen;
 }
 </style>
