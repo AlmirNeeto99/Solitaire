@@ -65,11 +65,19 @@ export default {
       initialY = 0,
       afterX = 0,
       afterY = 0
+    let margin = null
+    console.log()
     card.addEventListener('mousedown', function (e) {
-      card.classList.add('absolute')
+      card.parentNode.children.forEach((el) => {
+        console.log(el == card)
+      })
+      margin = card.style.marginTop
+      console.log(card.style.marginTop)
       initialX = e.clientX
       initialY = e.clientY
       document.onmousemove = function (e) {
+        card.classList.add('fixed')
+        card.style.marginTop = null
         afterX = initialX - e.clientX
         afterY = initialY - e.clientY
         initialX = e.clientX
@@ -78,11 +86,12 @@ export default {
         card.style.left = card.offsetLeft - afterX + 'px'
       }
       document.onmouseup = function (e) {
-        card.classList.remove('absolute')
+        card.classList.remove('fixed')
         document.onmousemove = null
         document.onmouseup = null
-        card.style.top = '0px'
-        card.style.left = '0px'
+        card.style.top = null
+        card.style.left = null
+        card.style.marginTop = margin
       }
     })
   },
